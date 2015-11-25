@@ -1,0 +1,4 @@
+50,50,Ciudad 5
+20,20,Ciudad 2
+60,60,Ciudad 6
+40,40,Ciudad 4
