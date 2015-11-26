@@ -24,8 +24,21 @@ public class Programa {
             String pal = bfr.readLine();
             System.out.println("Palabra: "+pal);
             palabra = new Palabra(pal);
-            if(palabra.tieneDiptongo())
+            if(palabra.tieneDiptongo()){
                 System.out.println("Tiene diptongo!");
+            }else{
+                System.out.println("no tiene pues");
+            }
+            if(palabra.esPalindroma()){
+                System.out.println("Palindroma mtf");
+            }else{
+                System.out.println("tampoco mi broer");
+            }
+            if(Palabra.esPalindrom(palabra.getPalabra())){
+                System.out.println("Palindroma mtf");
+            }else{
+                System.out.println("tampoco mi broer");
+            }
         } catch (IOException ex) {
             System.out.println("Error!");
             Logger.getLogger(Programa.class.getName()).log(Level.SEVERE, null, ex);
