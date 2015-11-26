@@ -76,14 +76,8 @@ public class Conjunto {
             return null;
         }
         LinkedList<Coordenada> resultado = new LinkedList<>();
-        if (conjunto1.isEmpty() && conjunto2.isEmpty()) {
+        if (conjunto1.isEmpty() || conjunto2.isEmpty()) {
             return resultado; //vacío intereseccion vacío = vacío
-        }
-        if (conjunto1.isEmpty() && !conjunto2.isEmpty()) {
-            return resultado; // vacío interseccion conjunto2 = vacio
-        }
-        if (!conjunto1.isEmpty() && conjunto2.isEmpty()) {
-            return resultado; // conjunto1 interseccion vacío = vacio
         }
         for (Coordenada c : conjunto1) {
             for (Coordenada a : conjunto2) {
@@ -108,12 +102,11 @@ public class Conjunto {
         if (conjunto1 == null) {
             return null;
         }
-        LinkedList<Coordenada> res = new LinkedList<>();
         if (conjunto2 == null || (conjunto1.isEmpty() && !conjunto2.isEmpty()) || (!conjunto1.isEmpty() && conjunto2.isEmpty())) //Si alguno de los dos conjuntos es vacio, la diferencia es el primer conjunto
         {
             return (LinkedList<Coordenada>) conjunto1.clone(); //retornamos un nuevo objeto, copia del conjunto1
         }
-        boolean encontrado = false;
+        LinkedList<Coordenada> res = new LinkedList<>();
         //le agregamos la etiqueta c1 al foreach del conjunto1, esto servirá para poder saltarnos iteraciones si encontramos algún elemento del conjunto1 en el conjunto2
         c1:
         for (Coordenada c : conjunto1) {
