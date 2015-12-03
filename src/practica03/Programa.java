@@ -71,7 +71,7 @@ public class Programa {
                 
                 //no tiene esta cuenta, hay que agregársela.
                 if(posibleC == null){
-                   cuenta.agergarTransaccion(t); //considerando el archivo como registro de transacciones únicas
+                   cuenta.agergarTransaccion(t); //agregar la transacción
                    c.agregarCuenta(cuenta);
                    clientes.add(c);
                    continue;
