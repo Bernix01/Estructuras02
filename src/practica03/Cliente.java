@@ -24,7 +24,7 @@ public class Cliente implements Comparable {
 
     @Override
     public String toString() {
-        return "Cliente{" + "id=" + id + ", \ncuentas=" + cuentas.toString() + "}\n";
+        return "\nCliente{" + "\n\tid=" + id + ", \n\tcuentas=" + cuentas.toString() + "}";
     }
 
     public int getId() {

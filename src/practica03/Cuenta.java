@@ -21,12 +21,12 @@ public class Cuenta implements Comparable {
     public Cuenta(int numero, LinkedList<Transaccion> transacciones) {
         this.numero = numero;
         this.transacciones = transacciones;
-        this.saldo = 0;
+        this.saldo = 400;
     }
 
     @Override
     public String toString() {
-        return "\tCuenta{" + "numero=" + numero + ", \ntransacciones=" + transacciones + ", saldo=" + saldo + "}\n";
+        return "\n\t\tCuenta{" + "\n\t\t\tnumero=" + numero + ", \n\t\t\ttransacciones=" + transacciones + ", \n\t\t\tsaldo=" + saldo + "}";
     }
 
     @Override
