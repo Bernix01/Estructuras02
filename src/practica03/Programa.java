@@ -16,6 +16,7 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -76,6 +77,7 @@ public class Programa {
                 //Busco si el cliente ya está registrado en el banco
                 for(Cliente tmp:clientes){
                     if(tmp.equals(c)){
+                        
                         c = tmp;// asigno la coincidencia a c para trabajar con el cliente existente
                         nuevo = false;
                         break;

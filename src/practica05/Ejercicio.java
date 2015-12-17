@@ -6,6 +6,7 @@
 package practica05;
 
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 /**
  *
@@ -13,8 +14,9 @@ import java.util.LinkedList;
  */
 public class Ejercicio {
     public LinkedList<Maleta> removerMaletas(LinkedList<Maleta> aat, String vuelo){
-        LinkedList<Maleta> carrito;
+        LinkedList<Maleta> carrito = new LinkedList<>();
         Maleta masPesada = null;
+        ListIterator iter = carrito.listIterator();
         carrito = new LinkedList<>();
         while(existenMaletas(aat,vuelo)){
             for(Maleta m:aat){
